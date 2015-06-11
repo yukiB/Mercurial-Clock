@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" /><title>Mercurial Clock</title>
+<meta name="Description" content="jsdo.it - share JavaScript, HTML5 and CSS - " />
+<meta name="Keywords"  content="JavaScript,HTML5,CSS" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" type="text/css" href="css/clock.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+<link rel="stylesheet" href="css/jquery.remodal.css">
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script src="js/jquery.remodal.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+
+<div id='timer' style="margin-left: 500px; margin-top: 200px; position: absolute;">
+<div class='clock'>
+<div class='clock_center'>
+	<div class='c1 tdiv'><div class='numpos tdiv'><div class='num tdiv'>1</div></div></div>
+	<div class='c2 tdiv'><div class='numpos tdiv'><div class='num tdiv'>2</div></div></div>
+	<div class='c3 tdiv'><div class='numpos tdiv'><div class='num tdiv'>3</div></div></div>
+	<div class='c4 tdiv'><div class='numpos tdiv'><div class='num tdiv'>4</div></div></div>
+	<div class='c5 tdiv'><div class='numpos tdiv'><div class='num tdiv'>5</div></div></div>
+	<div class='c6 tdiv'><div class='numpos tdiv'><div class='num tdiv'>6</div></div></div>
+	<div class='c7 tdiv'><div class='numpos tdiv'><div class='num tdiv'>7</div></div></div>
+	<div class='c8 tdiv'><div class='numpos tdiv'><div class='num tdiv'>8</div></div></div>
+	<div class='c9 tdiv'><div class='numpos tdiv'><div class='num tdiv'>9</div></div></div>
+	<div class='c10 tdiv'><div class='numpos tdiv'><div class='num tdiv'>10</div></div></div>
+	<div class='c11 tdiv'><div class='numpos tdiv'><div class='num tdiv'>11</div></div></div>
+	<div class='c12 tdiv'><div class='numpos tdiv'><div class='num tdiv'>12</div></div></div>
+	<div class='adjust_hour tdiv'><div class='adjust_hour_minus'><div id='ahour' class='arrow_hour tdiv'></div></div></div>
+	<div class='adjust_min tdiv'><div class='adjust_min_minus'><div id='amin' class='arrow_min tdiv'></div></div></div>
+	<div class='oscillation tdiv'><div id='asec' class='arrow_sec tdiv'></div></div>
+</div>
+</div>
+<div id="changeTimer"></div>
+<div class='speed_buttons' style="visibility:hidden">
+	<div id='fast_speed' class='change_speed'>fast</div>
+	<div id='normal_speed' class='now_speed change_speed'>normal</div>
+	<div id='slow_speed' class='change_speed' style='float:right'>slow</div>
+<!-- /div><div id="rect" onclick="onclicked();" -->
+</div>
+</div>
+
+    <div class="remodal"  data-remodal-id="modal">
+        <h1>Finished</h1>
+        <p>
+            It's the end of this task.
+        </p>
+        <br>
+    </div>
+
+    <div id="modal2" class="remodal"  data-remodal-id="modal2">
+        <h1>Mercurial Clock</h1>
+        <p>
+                "Mercurial Clock" is a virtual clock that displays modified time speed.
+                Using this clock, users can control their work rate unconsciously.
+                Please select the clock's speed and push start button.
+        </p>
+        <br>
+        <div id="speedselect">
+        	<input type="radio" name="q2" value= "fast_speed"> fast
+			<input type="radio" name="q2" value="normal_speed" checked> normal
+			<input type="radio" name="q2" value="slow_speed"> slow
+			<span id="ssbutton" class='.modal-button' style="border: 2px solid #889;
+				-webkit-border-radius: 8px; color: #889;font-size:15px;">select</span>
+        </div>
+        <a class="remodal-confirm" href="#">Start!</a>
+    </div>
+
+
+<script>
+
+    // Or init in this way:
+    var inst = $('[data-remodal-id=modal2]').remodal();
+    // inst.open();
+</script>
+</body>
+</html>

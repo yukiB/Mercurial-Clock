@@ -1,0 +1,204 @@
+@-webkit-keyframes clockarrow0{
+	0%{-webkit-transform:rotate(-90deg)}
+	100%{-webkit-transform:rotate(270deg)}
+}
+
+@-webkit-keyframes clockarrow1{
+	0%{-webkit-transform:rotate(-90deg)}
+	100%{-webkit-transform:rotate(270deg)}
+}
+
+@-webkit-keyframes oscillation0{
+	0%{-webkit-transform:rotate(0deg)}
+	50%{-webkit-transform:rotate(-3deg)}
+	55%{-webkit-transform:rotate(-3.3deg)}
+	60%{-webkit-transform:rotate(-3.6deg)}
+	65%{-webkit-transform:rotate(-3.9deg)}
+	70%{-webkit-transform:rotate(1.5deg)}
+	75%{-webkit-transform:rotate(3.2deg)}
+	80%{-webkit-transform:rotate(0.9deg)}
+	85%{-webkit-transform:rotate(0.9deg)}
+	90%{-webkit-transform:rotate(0.6deg)}
+	100%{-webkit-transform:rotate(0deg)}
+}
+
+@-webkit-keyframes oscillation1{
+	0%{-webkit-transform:rotate(0deg)}
+	50%{-webkit-transform:rotate(-3deg)}
+	55%{-webkit-transform:rotate(-3.3deg)}
+	60%{-webkit-transform:rotate(-3.6deg)}
+	65%{-webkit-transform:rotate(-3.9deg)}
+	70%{-webkit-transform:rotate(1.5deg)}
+	75%{-webkit-transform:rotate(3.2deg)}
+	80%{-webkit-transform:rotate(0.9deg)}
+	85%{-webkit-transform:rotate(0.9deg)}
+	90%{-webkit-transform:rotate(0.6deg)}
+	100%{-webkit-transform:rotate(0deg)}
+}
+
+
+#main{
+	display: box;
+	display: -webkit-box;
+	display: -moz-box;
+	box-pack: center;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+}
+
+.tdiv{
+	position:absolute;
+}
+
+.arrow_hour,.arrow_min,#asec{
+	position:absolute;
+	background:black;
+	box-shadow:white 0 0 20px;
+	opacity:0.6;
+}
+.arrow_min{
+	left:-8px;top:-8px;width:200px;height:16px;border-radius:8px;
+	-webkit-transform-origin:8px 8px;
+	-moz-transform-origin:8px 8px;
+	-webkit-animation:clockarrow-min0 3600s linear 0 infinite;
+	-moz-animation:3600s linear 0s normal none infinite clockarrow0;
+	-webkit-animation-play-state:paused;
+	-webkit-animation-name: a;
+}
+.arrow_hour{
+	left:-10px;top:-10px;width:120px;height:20px;border-radius:10px;
+	-webkit-transform-origin:10px 10px;
+	-moz-transform-origin:10px 10px;
+	-webkit-animation:clockarrow-hour0 43200s linear 0 infinite;
+	-moz-animation:43200s linear 0s normal none infinite clockarrow0;
+	-webkit-animation-play-state:paused;
+	-webkit-animation-name: a;
+}
+.arrow_sec{
+	-webkit-animation:clockarrow0 60s linear 0 infinite;
+	-webkit-animation-play-state:paused;
+	-webkit-animation-name: a;
+}
+
+#asec{
+	left:-4px;top:-4px;width:200px;height:8px;border-radius:4px;
+	-webkit-transform-origin:4px 4px;
+	-moz-transform-origin:4px 4px;
+}
+
+.oscillation{
+	-webkit-animation:oscillation0 1s linear 0 infinite;
+	-moz-animation:1s linear 0s normal none infinite oscillation0;
+	-webkit-animation-play-state:paused;
+	-webkit-animation-name: a;
+}
+
+.clock_center{
+	position:absolute;left:50%;top:50%;
+}
+.adjust_hour{
+	-webkit-animation:adjust 48s linear 0 infinite;
+	-moz-animation:48s linear 0s normal none infinite adjust;
+	-webkit-animation-play-state:paused;
+	-moz-animation-play-state:paused;
+}
+.adjust_min{
+	-webkit-animation:adjust 4s linear 0 infinite;
+	-moz-animation:4s linear 0s normal none infinite adjust;
+	-webkit-animation-play-state:paused;
+	-moz-animation-play-state:paused;
+}
+.adjust_hour_minus{
+	-webkit-animation:adjust_minus 48s linear 0 infinite;
+	-moz-animation:48s linear 0s normal none infinite adjust_minus;
+	-webkit-animation-play-state:paused;
+	-moz-animation-play-state:paused;
+}
+.adjust_min_minus{
+	-webkit-animation:adjust_minus 4s linear 0 infinite;
+	-moz-animation:4s linear 0s normal none infinite adjust_minus;
+	-webkit-animation-play-state:paused;
+	-moz-animation-play-state:paused;
+}
+
+
+/*
+div.up,div.down{
+	width:100px;height:100px;
+	font-size:50px;
+	text-align:center;
+	line-height:100px;
+	z-index:20;
+	top:-40px;
+	-webkit-transition:opacity 0.1s linear;
+	-moz-transition:opacity 0.1s linear;
+	opacity:0.1;
+	cursor:default;
+}
+div.up{left:0;}
+div.down{left:-100px;}
+div.up:hover,div.down:hover{opacity:0.5;}
+div.up:active,div.down:active{color:blue;}
+div.up:active ~ .adjust_hour{
+	-webkit-animation-play-state:running;
+	-moz-animation-play-state:running;
+}
+div.up:active ~ .adjust_min{
+	-webkit-animation-play-state:running;
+	-moz-animation-play-state:running;
+}
+
+div.down:active ~ div .adjust_hour_minus{
+	-webkit-animation-play-state:running;
+	-moz-animation-play-state:running;
+}
+div.down:active ~ div .adjust_min_minus{
+	-webkit-animation-play-state:running;
+	-moz-animation-play-state:running;
+}*/
+
+#rect
+{
+    background-color: #f00;
+    width: 100px;
+    height: 100px;
+}
+
+body{margin:0;padding:0;}
+.clock{
+	position:relative;
+	margin:auto;
+	padding: auto;
+	min-width:460px;width:100%;min-height:460px;height:100%;
+}
+.numpos{top:-200px;}
+.num{
+	left:-30px;top:-30px;width:60px;height:60px;
+	text-align:center;
+	font-size:50px;line-height:60px;
+	color:#778;
+}
+.c1{-webkit-transform:rotate(30deg);-moz-transform:rotate(30deg)}
+.c1 .num{-webkit-transform:rotate(-30deg);-moz-transform:rotate(-30deg)}
+.c2{-webkit-transform:rotate(60deg);-moz-transform:rotate(60deg)}
+.c2 .num{-webkit-transform:rotate(-60deg);-moz-transform:rotate(-60deg)}
+.c3{-webkit-transform:rotate(90deg);-moz-transform:rotate(90deg)}
+.c3 .num{-webkit-transform:rotate(-90deg);-moz-transform:rotate(-90deg)}
+.c4{-webkit-transform:rotate(120deg);-moz-transform:rotate(120deg)}
+.c4 .num{-webkit-transform:rotate(-120deg);-moz-transform:rotate(-120deg)}
+.c5{-webkit-transform:rotate(150deg);-moz-transform:rotate(150deg)}
+.c5 .num{-webkit-transform:rotate(-150deg);-moz-transform:rotate(-150deg)}
+.c6{-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg)}
+.c6 .num{-webkit-transform:rotate(-180deg);-moz-transform:rotate(-180deg)}
+.c7{-webkit-transform:rotate(210deg);-moz-transform:rotate(210deg)}
+.c7 .num{-webkit-transform:rotate(-210deg);-moz-transform:rotate(-210deg)}
+.c8{-webkit-transform:rotate(240deg);-moz-transform:rotate(240deg)}
+.c8 .num{-webkit-transform:rotate(-240deg);-moz-transform:rotate(-240deg)}
+.c9{-webkit-transform:rotate(270deg);-moz-transform:rotate(270deg)}
+.c9 .num{-webkit-transform:rotate(-270deg);-moz-transform:rotate(-270deg)}
+.c10{-webkit-transform:rotate(300deg);-moz-transform:rotate(300deg)}
+.c10 .num{-webkit-transform:rotate(-300deg);-moz-transform:rotate(-300deg)}
+.c11{-webkit-transform:rotate(330deg);-moz-transform:rotate(330deg)}
+.c11 .num{-webkit-transform:rotate(-330deg);-moz-transform:rotate(-330deg)}
+.c12{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg)}
+.c12 .num{-webkit-transform:rotate(-0deg);-moz-transform:rotate(-0deg)}

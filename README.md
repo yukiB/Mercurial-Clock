@@ -3,7 +3,7 @@
 "Mercurial Clock" is a virtual clock that displays modified time speed.
 Using this clock, users can control their work rate unconsciously [1].
 
-# Usage
+## Usage
 
 Open index.html with a browser. We checked it works correctly with Safari Version 8.0.5
 You can control the speed of the colock's hand with resource/data.json.
